@@ -5,14 +5,13 @@ public class BirthdayMail implements MailCode {
     public String generateEmail(Client client) {
         try{
             String returnedEmail = content;
-            returnedEmail.replace("{name}", client.getName());
-            returnedEmail.replace("{age}", client.getName());
+            if(returnedEmail.contains("{name}")){
+            returnedEmail.replace("{name}", client.getName());}
+            if(returnedEmail.contains("{age}")){
+            returnedEmail.replace("{age}", client.getName());}
             return returnedEmail;
         }catch (Exception e){
             return null;
         }
-    }
-    public static void setContent(String content){
-        BirthdayMail.content = content;
     }
 }

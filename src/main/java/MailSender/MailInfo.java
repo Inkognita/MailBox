@@ -4,9 +4,9 @@ public class MailInfo {
     private Client client;
     private MailCode mailCode;
 
-    @Override
-    public String toString() {
-        return super.toString();
+    public MailInfo(Client client, MailCode mailCode){
+        this.client = client;
+        this.mailCode = mailCode;
     }
 
     public Client getClient() {
