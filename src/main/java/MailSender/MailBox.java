@@ -13,7 +13,7 @@ public class MailBox {
     }
     public void sendAll(){
         for (MailInfo info : infos) {
-            if(MailSender.sendMail(info);){
+            if(MailSender.sendMail(info)){
                 infos.remove(info);
             }
         }
